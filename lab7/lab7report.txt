@@ -1,0 +1,32 @@
+Ian Polito
+ipolito
+C335
+Lab 7 Report
+Lab Partner: Colin Curry | colcurry
+
+1) The 14 pins for the accelerometer/magnetometer are as follows:
+Pin	Name		Function
+1	Vdd_IO		Power supply for I/O pins
+2	SCL		Signal interface I2C serial clock (SCL)
+3	SDA		Signal interface I2C serial data (SDA)
+4	INT2		Inertial Interrupt 2
+5	INT1		Inertial Interrupt 1
+6	C1		Reserved capacitor connection (C1)
+7	GND		0 V supply
+8	Reserved	Leave unconnected
+9	DRDY		Data ready
+10	Reserved	Connect to GND
+11	Reserved	Connect to GND
+12	SETP		S/R capacitor connection (C2)
+13	SETC		S/R capacitor connection (C2)
+14	Vdd		Power supply
+
+It takes a minimum of 2.16 volts and a maximum of 3.60 volts to power the accelerometer and magnetometer. The chip is located below the top right usb connector and above the STM32 CPU
+
+2. The code must write to the accelerometer/magnetometer before reading from it because it sets the base settings before it starts recording data. For example, for f3d_accel, it sets the power mode, update frequency and filter settings. And for f3d_mag, it sets the output rate, measurement scall and conversion frequency.
+
+3. The code given recieves the raw data in bits and then casts it to a float before storing it in the result array.
+
+4. The accelerometer gives pitch and roll data that can correct the magnetometer data since the angle a compass is held can affect the data recieved, so this is used to fix that.
+
+Challenges: The challenges for this lab were figuring out how the pitch and roll are calculated, along with the compass heading in order to visualize the data on the LCD screen. In addition, it was a challenge to program our visualizations to the LCD screen and making it switch by using the user_button. Through this lab, I learned how the accelerometer/magnetometer worked and collected data and how to calculate compass heading and pitch/roll based on this data.
