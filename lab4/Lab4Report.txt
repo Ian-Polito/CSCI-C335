@@ -1,0 +1,20 @@
+Ian Polito
+ipolito
+
+Partner:
+Colin Curry
+colcurry
+
+1. Two connections are required, RX for recieving and TX for transmitting.
+2. Alternate functions for GPIO pins are necessary since we are using the pins for a peripheral, in this case UART. The pins are
+set to alternate functions so that the peripheral can determine the pin output.
+3. Baud rate is the rate at which data is transferred.
+4. We need newlib_stubs since the operating system normally does much of the work for printf, but since we are using newlib, a 
+library of functions that do not rely on an operating system, the functions the operating system normally would handle need to be
+handled by stubs.
+5. Salae Logic Analyzer works best as a debugger when you need to see what the hardware is actually doing. For example if a pin was
+not initialized the software will not doing anything and debuggers like gdb will be next to useless for fixing this issue.
+
+Results: Some of the challenges of this lab were figuring out how to correctly configure the serial connection and using the Logic
+program. Through this lab I learned how to use the UART peripheral, the serialT command with the wired board, the Logic program,
+and the functionality of newlib and its stubs.

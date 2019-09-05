@@ -1,0 +1,17 @@
+Ian Polito
+ipolito
+
+Partner: Colin Curry
+colcurry
+
+1. The CS pin is used to select when the transaction of data is starting or stopping. It is set to low when starting a transaction
+and high when the transaction is done.
+2. It is set to high at the end of the pin initializations since there is no data transaction at this point. The functions
+f3d_gyro_read, f3d_gyro_write both modify CS.
+3. Each peripheral will have its own CS line, in which the one that will be used at a given time will be set to low and all others
+will be set to high.
+4. The baud rate prescaler is set to 8, and the resulting SPI clock frequency is 3Mhz (24/8)
+5. SPI is synchronous and the slave and master must agree on a transmission speed in advance. It might be useful to change the
+transmission rate on the fly if there are multiple peripherals that require different speeds.
+
+Challenges: Setting up the gyroscope drivers was challenging as well as programming the led's to visually show the gyroscope's data. Through this lab I learned to configure the I/O pins for SPI as well as configure the peripheral in order to get data from the gyroscope. I also learned how to use the led's in greater depth to visualize the gyroscope data.

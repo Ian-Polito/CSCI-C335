@@ -1,0 +1,18 @@
+Ian Polito
+ipolito
+
+Results:
+I accomplished the hello.c program without any difficulty, and with some effort was able to make
+the "bad" hello.c program create new files every three seconds.
+
+Challenges:
+Creating the "bad" hello.c program and making it create new files was a challenge since new
+filename strings would need to be dynamically created. To achieve this, I used created a string
+that would be used as the filename and in each loop step, used strcpy to copy "file" into it to
+start. Then I used an int variable that would increment every loop step and used the sprintf function
+to cast it as a string then used strcat to add that to the filename string. Lastly I used strcat
+again to add ".txt" to the end and created a new file using this string.
+
+What I Learned:
+I reviewed how to create git repo's, git commands, and learned how to use the sprintf function to
+cast things such as ints to strings.

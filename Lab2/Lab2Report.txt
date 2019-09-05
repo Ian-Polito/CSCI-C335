@@ -1,0 +1,18 @@
+Ian Polito
+ipolito
+
+Partner:
+Colin Curry
+colcurry
+
+Results:
+I created a simple program to count characters, words and lines from stdin and modified the given
+memory dump program with my partner.
+
+Challenges:
+Modifying the memory dump program was difficult since going into the lab I did not understand much
+of how it worked and the necessary printf commands to print the data with the correct type and format. By using GDB and reading material online I was able to correctly modify the program to
+output the data as specified.
+
+What I Learned:
+I learned more about how data is aligned in memory and several different printf flags and specifiers in order to print the data out correctly.

@@ -1,0 +1,17 @@
+Ian Polito
+ipolito
+
+Partner:
+Colin Curry
+colcurry
+
+1. 72MHz speed, 256-Kbyte flash memory, 48-Kbyte RAM
+2. General Purpose I/O
+4. Port E Pin 11 and Port E Pin 15
+5. GPIO_Pin, GPIO_Mode, GPIO_Speed, GPIO_OType, GPIO_PuPd
+
+Results: The main challenge of this lab was working with this new board for the first time. In
+particular for working with the LED's and Button, figuring out which functions needed to be called
+and what they did. Through this, I was able to learn how to initialize GPIO's for LED and Button pins,
+how to set these in C, and how to configure the board's clock and in general how to work with the
+STM32Discovery board.
