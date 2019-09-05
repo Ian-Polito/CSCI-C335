@@ -1,0 +1,18 @@
+Ian Polito
+ipolito
+C335
+Lab 9
+Partner: Colin Curry | colcurry
+
+Q1) If we want to recieve data from SD card, we need to set the cable select to high to signal
+that, and then to signal we are ending data transmission.
+
+Q2) Using the timer instead of the delay loop might be better since the timer keeps track of conventional time as opposed to using hardware cycles to estimate which is less accurate and not good enough for what we're doing.
+
+Q3) DMA is much more efficient than SPI for transferring data, and works by reading memory from the memory bus and then writes to the peripheral using the peripheral bus. This has several advantages over SPI since it does not make the processor wait during the polling process, the transfer rate is not nearly as limited as SPI and it is possible to transfer data at a constant rate. This is useful for improving performance of this application since it can more easily transfer the image data and could even support the use of BMP images.
+
+Q4) The file allocation table contains information regarding the size and location of files on the storage unit. If an entry in the table is corrupted, part of a file can be lost since the device using it will no longer be able to seek for the file without the size and location information in the table.
+
+Q5) Fat32 allows for a greater storage space and allows the root directory to grow, whereas Fat16 only allows a much smaller storage space and holds a maximum of 512 items in the root.
+
+Challenges: The hardest part of this lab was getting the SD card formatted and setup correctly for use with the Discovery board. In addition, programming the application to correctly read from the SD card was a challenge. Through this lab I learned how to setup the SD card with the Discovery board, read image data from it, manipulate the image (such as rotation and orientation, as well as checking if the resolution and color depth are okay), and use the acceleromater to change orientation for viewing in landscape vs portrait.
