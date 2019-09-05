@@ -1,0 +1,17 @@
+Ian Polito
+ipolito
+Final Project Description
+Partner: Colin Cury
+
+Description and core functionality:
+Our game is a lunar lander inspired video game. The goal of the game is to safely land a lunar lander on the moon. The landing zone
+marked in red is where the player is supposed to land, and must use the nunchuck and board gyrometer to move the ship there and hit
+the landing zone without going to fast, otherwise they will crash. The game is drawn on the LCD screen with audio playing when the
+player starts, lands and crashes, and also shows a crash image when the player crashes. The player can move the ship by using the
+nunchuck and board gyrometer. All sounds and images are stored and loaded from the SD card.
+
+Task Breakdown:
+Ian:
+Crash image, starting/ending game, drawing ship
+Colin:
+Sounds, ship controls

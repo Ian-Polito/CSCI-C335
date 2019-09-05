@@ -1,0 +1,23 @@
+Ian Polito
+ipolito
+Final Project Report
+Partner: Colin Cury
+
+Tasks:
+I was responsible for programming the image drawn upon crashing, starting and ending the game, and drawing the ship. I accomplished
+drawing the image by finding and correctly converting an image based on how we did this in Lab 9, and created a function that would
+draw the image when the ship crashed abstracted from what we programmed in Lab 9. As for drawing the ship, to simplify things and
+to more easily draw something more interesting than a square box, I decided to draw the ship using the drawString function to draw
+a capital A to the screen since it looks somewhat like a ship. To redraw it when moving around, before incrementing the X and Y
+coordinates based on momentum, I programmed it to draw a space where the ship was then redraw it based on the new coordinates.
+Lastly, to start and end the game, I accomplished this by using to while loops, one for restarting the game to base conditions and
+the other as the game loop. If the ship was landed or crashed it would change the player's score and break out of the first loop
+in order to restart the game. In addition, if the player crashed, the player would need to press the user button to restart the game.
+
+Challenges:
+The main challenge of this lab was getting the image to properly work along with getting the SD card to work. In addition
+drawing the ship was a challenge to draw correctly on the screen relative to its X and Y coordinates.
+
+What we could do differently: 
+If we could start the project over again we would try to draw more complex terrain with a better collision system, and draw
+moving asteroid obstacles to make the game more challenging and complex.
