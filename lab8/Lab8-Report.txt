@@ -1,0 +1,15 @@
+Ian Polito
+ipolito
+C335
+Lab 8
+Partner: Colin Curry | colcurry
+
+Q1) We can add the nunchuck without initializing any pins since i2c comes pre-wired to the board.
+
+Q2) The i2c_read function receives the raw data in bytes from the nunchuck, while the i2c_read_nunchuck function takes this data and interprets it how it should in the form of the fields that nunchuck_t has and sets this data in the given nunchuck_t struct.
+
+Q3) jx and jy specify the position of the joystick, ax ay and az correspond to the nunchuck's tilt angle, and c and z both specify if the c and z buttons are pressed respectively.
+
+Q4) data[5] represents the c and z button positions and the switch statement ands this number with 3 in binary. This determines what the struct z and c fields should be set to. For example if data[5] contains 11 (in binary, meaning both buttons are not pressed) and is anded with 0x03 (11 in binary) the result will be 11 (or 3 in decimal) which will result in Case 3; setting both z and c to 0. 
+
+Challenges: The largest challenge for this lab was to ensure that drawing all the data to the lcd screen was efficient, ie not drawing over the entire screen each step. Through this lab I learned how to set up an I2C connection with the wii nunchuck and how to use the nunchuck struct to get data from it. In addition I learned how to more efficiently draw bar graphs for the gyro, pitch and roll data, and to more efficiently draw our compass heading visualization implementation.
