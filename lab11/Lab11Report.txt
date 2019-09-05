@@ -1,0 +1,18 @@
+Ian Polito
+ipolito
+Lab11 Report
+Partner: Colin Cury
+
+The main difficulties for this lab were dealing with the SD Card and getting it to work properly. Once this was done, programming the file selection and audio player was not too difficult. From this lab I learned how the digital to analog converter works and how WAV files can be opened in C and played through the Audio Player using DMA.
+
+Questions:
+
+1. This directly points to memory.
+
+2. It's necessary to enable incrementing for the purpose of interrupts. The DMA controller will properly interrupt and get data in response to this configuration.
+
+3. This line of code checks whether there is more data with DMA.
+
+4. Since the transfer amount is so small, it won't be as fast using the xchng_datablock function
+
+5. Audiobuf is shared data, so it is important that they work on different portions so as to not overwrite something the other is working on.
