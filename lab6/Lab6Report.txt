@@ -1,0 +1,18 @@
+Ian Polito
+ipolito
+Lab 6 Report
+
+Partner: Colin Curry
+
+1. The advantages of using printf debugging is that it is simple and easy to debug. The disadvantages of using printf debugging is
+that you need to change the printf statements and recompile each time you want to try and check a value and you do not have the
+better functionality of a dedicated debugger.
+2. The DC pin used by the WriteBit function must be properly set before any data is read or wrote, so the higher function
+lcdWrite calls the WriteBit function before calling spiReadWrite
+3. This function ensures that the chip select is deasserted, which is important because it signals the end of communication.
+4. glcdfont.c has a matrix that maps its cells which contain the pixelized characters to ASCII characters.
+5. The timing difference is 0.4ms and the new function is more efficient since instead of individually drawing something pixel by
+pixel it is drawing entire blocks of pixels.
+
+Difficulties: The largest challenge by far was configuring the lcd screen to correctly draw a graphical representation of the
+gyroscope data, which we chose to do as a bar graph.
