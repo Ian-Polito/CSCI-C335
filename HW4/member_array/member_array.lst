@@ -1,0 +1,28 @@
+
+member_array.o:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+00000000 <member_array>:
+   0:	b4f0      	push	{r4, r5, r6, r7}
+   2:	2300      	movs	r3, #0
+   4:	0092      	lsls	r2, r2, #2
+   6:	e7ff      	b.n	8 <.loop>
+
+00000008 <.loop>:
+   8:	58c4      	ldr	r4, [r0, r3]
+   a:	428c      	cmp	r4, r1
+   c:	d101      	bne.n	12 <.notequal>
+   e:	2001      	movs	r0, #1
+  10:	e003      	b.n	1a <.end>
+
+00000012 <.notequal>:
+  12:	3304      	adds	r3, #4
+  14:	4293      	cmp	r3, r2
+  16:	d3f7      	bcc.n	8 <.loop>
+  18:	2000      	movs	r0, #0
+
+0000001a <.end>:
+  1a:	bcf0      	pop	{r4, r5, r6, r7}
+  1c:	4770      	bx	lr

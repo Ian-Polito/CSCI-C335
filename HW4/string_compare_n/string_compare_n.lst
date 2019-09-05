@@ -1,0 +1,32 @@
+
+string_compare_n.o:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+00000000 <string_compare_n>:
+   0:	b4f0      	push	{r4, r5, r6, r7}
+   2:	e7ff      	b.n	4 <.loop>
+
+00000004 <.loop>:
+   4:	2a00      	cmp	r2, #0
+   6:	d00a      	beq.n	1e <.end>
+   8:	3a01      	subs	r2, #1
+   a:	7803      	ldrb	r3, [r0, #0]
+   c:	780c      	ldrb	r4, [r1, #0]
+   e:	42a3      	cmp	r3, r4
+  10:	d102      	bne.n	18 <.notequal>
+  12:	3001      	adds	r0, #1
+  14:	3101      	adds	r1, #1
+  16:	e7f5      	b.n	4 <.loop>
+
+00000018 <.notequal>:
+  18:	1b18      	subs	r0, r3, r4
+  1a:	e000      	b.n	1e <.end>
+
+0000001c <.finished>:
+  1c:	2000      	movs	r0, #0
+
+0000001e <.end>:
+  1e:	bcf0      	pop	{r4, r5, r6, r7}
+  20:	4770      	bx	lr

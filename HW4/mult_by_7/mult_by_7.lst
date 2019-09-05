@@ -1,0 +1,13 @@
+
+mult_by_7.o:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+00000000 <mult_by_7>:
+   0:	b4f0      	push	{r4, r5, r6, r7}
+   2:	00c1      	lsls	r1, r0, #3
+   4:	1a09      	subs	r1, r1, r0
+   6:	0008      	movs	r0, r1
+   8:	bcf0      	pop	{r4, r5, r6, r7}
+   a:	4770      	bx	lr

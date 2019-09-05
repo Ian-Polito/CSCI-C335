@@ -1,0 +1,10 @@
+Ian Polito
+C335
+Homework 1
+
+Address and size of global variable state: Address 00012FE8 with Size 4 bytes
+Address and size of global variable state_counter: Address 00012FEC with Size 4 bytes
+Starting address and size of function stop_light(): Address 00008AFC with Size 90 bytes
+Starting address and size of function inc(): Address 00008AF8 with unknown Size
+Largest function in the executable HW1.elf: stop_light
+Overall size of the executable HW1.elf in bytes: 12,324 bytes

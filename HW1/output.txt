@@ -1,0 +1,39 @@
+qemu-system-arm -machine versatilepb -cpu cortex-m3 -nographic \
+-monitor null -serial null \
+-semihosting -kernel HW1.elf
+RED
+RED
+RED
+RED
+RED
+GREEN
+GREEN
+GREEN
+GREEN
+GREEN
+YELLOW
+YELLOW
+RED
+RED
+RED
+RED
+RED
+GREEN
+GREEN
+GREEN
+GREEN
+GREEN
+YELLOW
+YELLOW
+RED
+RED
+RED
+RED
+RED
+GREEN
+GREEN
+GREEN
+GREEN
+GREEN
+YELLOW
+YELLOW
